@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 5 | Máquinas del IDIT</title>
+
+```
+<style>
+    :root {
+        --azul: #17365d;
+        --azul-claro: #eaf2f8;
+        --fondo: #f4f6f9;
+        --texto: #263238;
+        --blanco: #ffffff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--fondo);
+        color: var(--texto);
+        line-height: 1.7;
+    }
+
+    header {
+        background: linear-gradient(135deg, #17365d, #2874a6);
+        color: white;
+        padding: 55px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    header p {
+        margin: 5px 0;
+    }
+
+    nav {
+        background: var(--blanco);
+        padding: 14px;
+        text-align: center;
+        box-shadow: 0 2px 8px #00000012;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav a {
+        display: inline-block;
+        color: var(--azul);
+        text-decoration: none;
+        font-weight: bold;
+        margin: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0 18px;
+    }
+
+    section {
+        background: var(--blanco);
+        padding: 28px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px #0000000a;
+        scroll-margin-top: 100px;
+    }
+
+    h2 {
+        color: var(--azul);
+        border-bottom: 2px solid #d6e4f0;
+        padding-bottom: 8px;
+    }
+
+    h3 {
+        color: #2874a6;
+        margin-top: 25px;
+    }
+
+    .datos {
+        background: var(--azul-claro);
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    .tabla-contenedor {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 18px 0;
+        font-size: 0.95rem;
+    }
+
+    th, td {
+        padding: 12px;
+        border: 1px solid #d8dee5;
+        text-align: left;
+    }
+
+    th {
+        background: var(--azul);
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background: #f3f6f9;
+    }
+
+    .nota {
+        background: #fff7df;
+        border-left: 4px solid #d6a62e;
+        padding: 15px;
+        margin: 18px 0;
+    }
+
+    footer {
+        background: #17365d;
+        color: white;
+        text-align: center;
+        padding: 25px 15px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+        section {
+            padding: 20px;
+        }
+
+        nav a {
+            margin: 4px 6px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+    <h1>Máquinas del IDIT</h1>
+    <p>Práctica 5 · Introducción a la Mecatrónica</p>
+    <p>Investigación sobre maquinaria, manufactura y metrología</p>
+</header>
+
+<nav>
+    <a href="#objetivo">Objetivo</a>
+    <a href="#introduccion">Introducción</a>
+    <a href="#seguridad">Seguridad</a>
+    <a href="#medicion">Medición</a>
+    <a href="#maquinas">Máquinas</a>
+    <a href="#conclusion">Conclusión</a>
+</nav>
+
+<main>
+
+```
+<section class="datos">
+    <h2>Datos de la práctica</h2>
+    <p><strong>Asignatura:</strong> Proyecto de Ingeniería</p>
+    <p><strong>Tema:</strong> Máquinas del Instituto de Diseño e Innovación Tecnológica (IDIT)</p>
+    <p><strong>Modalidad:</strong> Investigación documental</p>
+</section>
+
+<section id="objetivo">
+    <h2>1. Objetivo</h2>
+    <p>
+        Investigar el funcionamiento y las aplicaciones de las principales
+        máquinas, herramientas e instrumentos de medición utilizados en
+        los talleres del IDIT, así como comprender la importancia de la
+        seguridad y la precisión en los procesos de manufactura.
+    </p>
+</section>
+
+<section id="introduccion">
+    <h2>2. Introducción</h2>
+    <p>
+        En ingeniería, los talleres de manufactura permiten transformar
+        materiales en piezas que pueden utilizarse en estructuras,
+        prototipos y mecanismos. Para realizar estos procesos es necesario
+        conocer el funcionamiento de los equipos, seleccionar las
+        herramientas adecuadas y seguir las medidas de seguridad.
+    </p>
+    <p>
+        En esta investigación se estudian instrumentos como el calibrador
+        Vernier y el micrómetro, además de máquinas utilizadas para cortar,
+        maquinar, doblar y unir materiales. Estos conocimientos ayudan a
+        comprender la relación entre el diseño y la fabricación de
+        componentes de ingeniería.
+    </p>
+</section>
+
+<section id="seguridad">
+    <h2>3. Seguridad e higiene en el taller</h2>
+    <p>Al trabajar con maquinaria es importante:</p>
+    <ul>
+        <li>Utilizar el equipo de protección personal indicado.</li>
+        <li>Evitar ropa suelta y mantener el cabello recogido.</li>
+        <li>Comprobar que las piezas estén sujetas correctamente.</li>
+        <li>Mantener las manos alejadas de las zonas de corte.</li>
+        <li>No ajustar ni limpiar equipos mientras estén funcionando.</li>
+        <li>Conocer los dispositivos de paro de emergencia.</li>
+        <li>Seguir las indicaciones del personal responsable del taller.</li>
+    </ul>
+    <p>
+        Estas medidas ayudan a prevenir accidentes y permiten trabajar
+        de manera responsable.
+    </p>
+</section>
+
+<section id="medicion">
+    <h2>4. Metrología e instrumentos de medición</h2>
+
+    <h3>4.1 Calibrador Vernier</h3>
+    <p>
+        El calibrador Vernier permite medir dimensiones exteriores,
+        interiores y profundidades. Puede ser mecánico o digital y se
+        utiliza para comprobar las dimensiones de diferentes piezas.
+    </p>
+
+    <h3>4.2 Micrómetro</h3>
+    <p>
+        El micrómetro es un instrumento diseñado para medir dimensiones
+        específicas con una resolución fina. Su aplicación depende del
+        rango de medición y del tipo de micrómetro utilizado.
+    </p>
+
+    <h3>4.3 Comparación</h3>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>Vernier</th>
+                    <th>Micrómetro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aplicación</td>
+                    <td>Mediciones exteriores, interiores y profundidad.</td>
+                    <td>Mediciones específicas de espesores y diámetros.</td>
+                </tr>
+                <tr>
+                    <td>Lectura</td>
+                    <td>Mecánica o digital.</td>
+                    <td>Mecánica o digital.</td>
+                </tr>
+                <tr>
+                    <td>Característica</td>
+                    <td>Versátil para diferentes tipos de medición.</td>
+                    <td>Diseñado para rangos de medición determinados.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>4.4 Datos dimensionales de referencia</h3>
+    <p>
+        La siguiente tabla presenta datos de referencia del material
+        consultado. Se incluyen con fines de análisis y no representan
+        mediciones realizadas personalmente para esta investigación.
+    </p>
+
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cubo</th>
+                    <th>Ancho (mm)</th>
+                    <th>Largo (mm)</th>
+                    <th>Alto (mm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>3</td><td>28.38</td><td>36.98</td><td>24.12</td></tr>
+                <tr><td>8</td><td>31.51</td><td>45.14</td><td>32.55</td></tr>
+                <tr><td>10</td><td>40.81</td><td>40.48</td><td>19.33</td></tr>
+                <tr><td>11</td><td>33.01</td><td>28.80</td><td>30.24</td></tr>
+                <tr><td>12</td><td>30.90</td><td>35.54</td><td>28.89</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>
+        Las mediciones permiten comprobar las dimensiones de una pieza y
+        determinar si son adecuadas para su fabricación o ensamble.
+        La resolución del instrumento, su calibración y la técnica
+        empleada pueden influir en los resultados.
+    </p>
+</section>
+
+<section id="maquinas">
+    <h2>5. Máquinas y procesos de manufactura</h2>
+
+    <h3>5.1 Fresadora</h3>
+    <p>
+        La fresadora utiliza una herramienta giratoria para retirar
+        material y producir superficies, ranuras y perfiles. La selección
+        de la herramienta y de los parámetros de corte depende del material
+        y de la geometría deseada.
+    </p>
+
+    <h3>5.2 Sierra de cinta</h3>
+    <p>
+        La sierra de cinta utiliza una hoja continua para realizar cortes
+        en materiales como madera y determinados tableros. Puede utilizarse
+        para obtener cortes rectos o curvos, según la máquina y la hoja.
+    </p>
+
+    <h3>5.3 Guillotina para lámina</h3>
+    <p>
+        La guillotina realiza cortes rectos en láminas metálicas mediante
+        una cuchilla. Es útil para preparar piezas con dimensiones
+        determinadas antes de otros procesos de fabricación.
+    </p>
+
+    <h3>5.4 Dobladora de lámina</h3>
+    <p>
+        La dobladora aplica fuerza para cambiar el ángulo de una lámina
+        metálica sin separar el material. Permite elaborar pestañas,
+        perfiles y componentes para carcasas o estructuras.
+    </p>
+
+    <h3>5.5 Soldadura por puntos</h3>
+    <p>
+        Este proceso utiliza presión y calor generado por resistencia
+        eléctrica para unir piezas metálicas, generalmente láminas
+        superpuestas. Se emplea en diferentes procesos industriales
+        de fabricación.
+    </p>
+
+    <h3>5.6 Resumen de aplicaciones</h3>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Equipo</th>
+                    <th>Función principal</th>
+                    <th>Aplicación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fresadora</td>
+                    <td>Retirar material.</td>
+                    <td>Ranuras, superficies y perfiles.</td>
+                </tr>
+                <tr>
+                    <td>Sierra de cinta</td>
+                    <td>Cortar material.</td>
+                    <td>Preparación de piezas.</td>
+                </tr>
+                <tr>
+                    <td>Guillotina</td>
+                    <td>Cortar lámina.</td>
+                    <td>Obtención de piezas planas.</td>
+                </tr>
+                <tr>
+                    <td>Dobladora</td>
+                    <td>Deformar lámina.</td>
+                    <td>Fabricación de perfiles y carcasas.</td>
+                </tr>
+                <tr>
+                    <td>Soldadora por puntos</td>
+                    <td>Unir piezas metálicas.</td>
+                    <td>Ensamble de láminas.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="conclusion">
+    <h2>6. Conclusión</h2>
+    <p>
+        A partir de esta investigación comprendí que cada máquina y cada
+        instrumento de medición tiene una función específica dentro de
+        los procesos de manufactura. El Vernier y el micrómetro ayudan
+        a verificar dimensiones, mientras que las máquinas de corte,
+        maquinado, doblado y soldadura permiten transformar los materiales
+        para obtener diferentes componentes.
+    </p>
+    <p>
+        Estos conocimientos son importantes en mecatrónica porque la
+        fabricación de piezas y la verificación de sus dimensiones
+        forman parte del desarrollo de mecanismos, estructuras y
+        prototipos. Asimismo, las medidas de seguridad son indispensables
+        para trabajar de forma responsable.
+    </p>
+</section>
+
+<section>
+    <h2>7. Fuentes de consulta</h2>
+    <ul>
+        <li>
+            <a href="https://alele20011.github.io/Intro-Mecatronica/Oliver/midit/"
+               target="_blank" rel="noopener noreferrer">
+                Material de referencia: Máquinas del IDIT —
+                Introducción a la Mecatrónica
+            </a>
+        </li>
+        <li>
+            Conceptos generales de metrología, instrumentos de medición
+            y procesos de manufactura.
+        </li>
+    </ul>
+</section>
+```
+
+</main>
+
+<footer>
+    <p>Práctica 5 · Máquinas del IDIT</p>
+    <p>Proyecto de Ingeniería · Introducción a la Mecatrónica</p>
+</footer>
+
+</body>
+</html>
