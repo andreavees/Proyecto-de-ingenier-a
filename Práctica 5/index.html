@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 5: Máquinas, herramientas e instrumentos de medición del IDIT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f2f5f9;
+            color: #243247;
+            line-height: 1.65;
+        }
+
+        header {
+            background: linear-gradient(135deg, #102a43, #176b87);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #d9e8f0;
+            max-width: 740px;
+            margin: 0 auto 10px;
+        }
+
+        .meta-info {
+            font-size: 14px;
+            color: #bae6fd;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .volver {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #8bd3dd;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .volver:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        main {
+            max-width: 920px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .seccion {
+            background: white;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 5px 18px rgba(16, 42, 67, 0.07);
+            border: 1px solid #e2e8f0;
+        }
+
+        .seccion h2 {
+            color: #102a43;
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+
+        .seccion h3 {
+            color: #176b87;
+            font-size: 18px;
+            margin: 20px 0 10px;
+        }
+
+        .seccion h4 {
+            color: #0f4c5c;
+            font-size: 16px;
+            margin: 16px 0 8px;
+        }
+
+        .seccion p {
+            color: #334155;
+            margin-bottom: 12px;
+        }
+
+        .seccion ul, .seccion ol {
+            margin: 10px 0 16px 24px;
+            color: #334155;
+        }
+
+        .seccion li {
+            margin-bottom: 8px;
+        }
+
+        .tabla-contenedor {
+            overflow-x: auto;
+            margin: 16px 0 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14.5px;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #102a43;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        .num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Práctica 5: Máquinas, herramientas e instrumentos de medición del IDIT</h1>
+        <p>Instituto de Diseño e Innovación Tecnológica (IDIT) — Universidad Iberoamericana Puebla</p>
+        <div class="meta-info">
+            <strong>Asignatura:</strong> Proyecto de Ingeniería &nbsp;|&nbsp; <strong>Profesor:</strong> Oliver
+        </div>
+        <a class="volver" href="../index.html">← Volver al portafolio</a>
+    </header>
+
+    <main>
+        <section class="seccion">
+            <h2>I. Objetivo</h2>
+            <p>Investigar el funcionamiento y las aplicaciones de las principales máquinas, herramientas e instrumentos de medición utilizados en los talleres del Instituto de Diseño e Innovación Tecnológica (IDIT). Asimismo, comprender la importancia de las normas de seguridad, la precisión de las mediciones y la selección adecuada de los procesos de manufactura para el desarrollo de proyectos de ingeniería.</p>
+
+            <h2>II. Introducción</h2>
+            <p>En el área de ingeniería, los talleres de manufactura permiten trabajar con distintos materiales y transformarlos en piezas que pueden utilizarse en prototipos, estructuras y mecanismos. Para realizar estos procesos es necesario conocer las máquinas disponibles, los instrumentos de medición y las medidas de seguridad correspondientes.</p>
+            <p>El Instituto de Diseño e Innovación Tecnológica (IDIT) cuenta con espacios destinados al desarrollo de actividades relacionadas con el diseño, la fabricación y la experimentación. Entre los equipos que se estudian en este contexto se encuentran los calibradores Vernier, los micrómetros, las fresadoras, las sierras de cinta, las guillotinas, las dobladoras de lámina y las soldadoras por puntos.</p>
+            <p>El propósito de esta investigación es comprender las funciones de estos equipos y reconocer cómo contribuyen a la fabricación de piezas. También se revisan conceptos como precisión, tolerancias, corte, deformación y unión de materiales, los cuales son importantes para el desarrollo de proyectos mecatrónicos.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>III. Normas de seguridad e higiene en el taller</h2>
+            <p>El uso de maquinaria requiere medidas de prevención para reducir los riesgos de accidentes. Las herramientas de corte y los equipos con partes móviles deben utilizarse únicamente después de recibir las indicaciones correspondientes y bajo la supervisión establecida por el taller.</p>
+            <p>Entre las principales medidas de seguridad se encuentran:</p>
+            <ul>
+                <li>Utilizar el equipo de protección personal indicado para cada actividad.</li>
+                <li>Llevar ropa adecuada y ajustada, evitando prendas sueltas que puedan engancharse en las máquinas.</li>
+                <li>Utilizar lentes de seguridad cuando exista riesgo de proyección de partículas.</li>
+                <li>Emplear calzado de seguridad cuando lo exijan las normas del taller.</li>
+                <li>Mantener el cabello recogido y retirar accesorios que puedan representar un riesgo.</li>
+                <li>Revisar que las piezas estén sujetas correctamente antes de comenzar una operación.</li>
+                <li>Mantener las manos alejadas de las zonas de corte y de los componentes móviles.</li>
+                <li>Conocer la ubicación de los dispositivos de paro de emergencia.</li>
+                <li>No retirar residuos ni ajustar herramientas mientras la máquina esté funcionando.</li>
+                <li>Seguir las instrucciones del personal responsable y no operar equipos sin autorización.</li>
+            </ul>
+            <p>El equipo de protección personal debe seleccionarse según el proceso que se realice. Por ejemplo, los riesgos asociados con una fresadora no son exactamente los mismos que los de una operación de doblado de lámina o soldadura.</p>
+            <p>La seguridad es parte fundamental del trabajo de ingeniería, ya que permite realizar las actividades de manera responsable y proteger tanto a los usuarios como a las instalaciones.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>IV. Metrología e instrumentos de medición</h2>
+            <p>La metrología es el área relacionada con las mediciones y sus métodos. En manufactura, medir correctamente permite verificar que una pieza tenga las dimensiones requeridas y que pueda ensamblarse con otros componentes.</p>
+            <p>Dos instrumentos comunes para realizar mediciones dimensionales son el calibrador Vernier y el micrómetro.</p>
+
+            <h3>1. Calibrador Vernier o pie de rey</h3>
+            <p>El calibrador Vernier es un instrumento que permite medir diferentes dimensiones de una pieza. Puede encontrarse en versiones mecánicas y digitales.</p>
+            <p>Sus principales aplicaciones son:</p>
+            <ol>
+                <li><strong>Medición exterior:</strong> permite determinar espesores, anchos y diámetros exteriores mediante las mordazas grandes.</li>
+                <li><strong>Medición interior:</strong> se utiliza para medir diámetros internos y dimensiones de aberturas con las mordazas pequeñas.</li>
+                <li><strong>Medición de profundidad:</strong> emplea una varilla que se extiende desde el extremo del instrumento para medir la profundidad de agujeros o cavidades.</li>
+            </ol>
+            <p>El modelo mecánico requiere interpretar la escala principal y el nonio, mientras que el digital muestra directamente el valor medido en una pantalla.</p>
+            <p>La elección entre ambos depende de las necesidades de la actividad, la resolución requerida y las características del instrumento.</p>
+
+            <h3>2. Micrómetro o Pálmer</h3>
+            <p>El micrómetro es un instrumento diseñado para realizar mediciones dimensionales con una resolución fina. Se utiliza, por ejemplo, para comprobar espesores o diámetros pequeños.</p>
+            <p>En el modelo mecánico, la lectura se obtiene combinando las graduaciones del cuerpo y del tambor móvil. En el modelo digital, el valor aparece en una pantalla, lo que facilita su lectura.</p>
+            <p>Algunos micrómetros digitales cuentan con una función incremental, identificada como INC. Esta función permite establecer un cero de referencia en una posición determinada y realizar mediciones relativas respecto de ese punto.</p>
+            <p>Para obtener resultados confiables, es importante colocar correctamente la pieza, evitar aplicar una presión excesiva y comprobar que el instrumento esté en condiciones adecuadas.</p>
+
+            <h3>3. Comparación entre el Vernier y el micrómetro</h3>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Calibrador Vernier</th>
+                            <th>Micrómetro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Uso principal</strong></td>
+                            <td>Mediciones exteriores, interiores y de profundidad.</td>
+                            <td>Mediciones precisas de dimensiones específicas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Versatilidad</strong></td>
+                            <td>Permite realizar diferentes tipos de medición.</td>
+                            <td>Depende del tipo y rango del instrumento.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lectura</strong></td>
+                            <td>Puede ser analógica o digital.</td>
+                            <td>Puede ser mecánica o digital.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resolución</strong></td>
+                            <td>Depende del modelo; algunos registran centésimas de milímetro.</td>
+                            <td>Depende del modelo; algunos registran milésimas de milímetro.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aplicación</strong></td>
+                            <td>Inspección dimensional general.</td>
+                            <td>Verificación fina de espesores y diámetros.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>La resolución representa el menor incremento que el instrumento puede mostrar. No debe confundirse automáticamente con la exactitud, ya que esta también depende de la calibración, el estado del equipo y la técnica de medición.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>V. Registro de mediciones dimensionales</h2>
+            <p>La referencia consultada presenta mediciones de cinco cubos de prueba identificados como cubos 3, 8, 10, 11 y 12. Para cada pieza se registraron el ancho, el largo y el alto utilizando un micrómetro y un calibrador Vernier.</p>
+            <p>Los siguientes valores se reproducen como datos de referencia para analizarlos desde el punto de vista metrológico; no corresponden a mediciones realizadas personalmente para este reporte.</p>
+
+            <h3>1. Datos de referencia: micrómetro</h3>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cubo</th>
+                            <th class="num">Ancho (mm)</th>
+                            <th class="num">Largo (mm)</th>
+                            <th class="num">Alto (mm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td class="num">26.623</td>
+                            <td class="num">34.520</td>
+                            <td class="num">22.528</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8</strong></td>
+                            <td class="num">29.792</td>
+                            <td class="num">43.448</td>
+                            <td class="num">29.868</td>
+                        </tr>
+                        <tr>
+                            <td><strong>10</strong></td>
+                            <td class="num">38.865</td>
+                            <td class="num">38.834</td>
+                            <td class="num">No medible con el rango del instrumento</td>
+                        </tr>
+                        <tr>
+                            <td><strong>11</strong></td>
+                            <td class="num">31.277</td>
+                            <td class="num">27.156</td>
+                            <td class="num">28.459</td>
+                        </tr>
+                        <tr>
+                            <td><strong>12</strong></td>
+                            <td class="num">29.209</td>
+                            <td class="num">33.839</td>
+                            <td class="num">26.892</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>En el caso del cubo 10, la altura no pudo registrarse con el micrómetro de referencia porque la abertura del instrumento no era suficiente para abarcar esa dimensión.</p>
+            <p>Esta situación demuestra que cada instrumento tiene un rango de medición limitado. Por ello, antes de medir una pieza es necesario comprobar que sus dimensiones se encuentren dentro de la capacidad del equipo.</p>
+
+            <h3>2. Datos de referencia: calibrador Vernier</h3>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cubo</th>
+                            <th class="num">Ancho (mm)</th>
+                            <th class="num">Largo (mm)</th>
+                            <th class="num">Alto (mm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td class="num">28.38</td>
+                            <td class="num">36.98</td>
+                            <td class="num">24.12</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8</strong></td>
+                            <td class="num">31.51</td>
+                            <td class="num">45.14</td>
+                            <td class="num">32.55</td>
+                        </tr>
+                        <tr>
+                            <td><strong>10</strong></td>
+                            <td class="num">40.81</td>
+                            <td class="num">40.48</td>
+                            <td class="num">19.33</td>
+                        </tr>
+                        <tr>
+                            <td><strong>11</strong></td>
+                            <td class="num">33.01</td>
+                            <td class="num">28.80</td>
+                            <td class="num">30.24</td>
+                        </tr>
+                        <tr>
+                            <td><strong>12</strong></td>
+                            <td class="num">30.90</td>
+                            <td class="num">35.54</td>
+                            <td class="num">28.89</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Al comparar las tablas, se observan diferencias entre las dimensiones registradas con ambos instrumentos. Estas variaciones pueden relacionarse con las características de los equipos, su resolución, la técnica de medición y la posición en la que se coloca cada instrumento.</p>
+            <p>Sin embargo, para determinar cuál lectura representa mejor la dimensión real de una pieza sería necesario conocer la calibración de los instrumentos y las condiciones en las que se realizaron las mediciones.</p>
+
+            <h3>3. Importancia de las mediciones</h3>
+            <p>Las mediciones permiten comprobar si una pieza cumple con las dimensiones establecidas en un diseño. Esto es importante porque una diferencia pequeña puede afectar el ensamble de dos componentes o el funcionamiento de un mecanismo.</p>
+            <p>Por esta razón, en ingeniería no basta con fabricar una pieza: también es necesario verificar sus dimensiones y comprobar que sean adecuadas para la aplicación prevista.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>VI. Maquinaria de corte y maquinado</h2>
+            <p>Los procesos de maquinado permiten modificar la geometría de una pieza mediante la eliminación de material. La herramienta seleccionada depende de la operación que se desea realizar, del material y de las dimensiones finales requeridas.</p>
+
+            <h3>1. Fresadora</h3>
+            <p>La fresadora es una máquina que utiliza una herramienta giratoria para retirar material de una pieza. Se emplea en operaciones como planeado, ranurado, desbaste y perfilado.</p>
+            <p>El movimiento relativo entre la herramienta y la pieza permite generar diferentes geometrías. En una fresadora convencional, la posición puede ajustarse mediante los movimientos de los ejes de la máquina.</p>
+            <p>Para obtener un resultado adecuado es importante considerar el tipo de material, la herramienta utilizada, la velocidad de giro y la velocidad de avance.</p>
+
+            <h4>Diferencia entre fresa y broca</h4>
+            <p>Aunque ambas son herramientas de corte, su función principal es diferente.</p>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Herramienta</th>
+                            <th>Función principal</th>
+                            <th>Aplicaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Broca</strong></td>
+                            <td>Realizar perforaciones, principalmente mediante movimiento axial.</td>
+                            <td>Elaboración de agujeros.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fresa</strong></td>
+                            <td>Retirar material mediante sus filos durante diferentes trayectorias.</td>
+                            <td>Ranuras, superficies planas y perfiles.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>La elección de la herramienta depende de la geometría que se necesita fabricar. Utilizar una herramienta que no corresponde a la operación puede afectar la calidad del resultado y aumentar el desgaste del equipo.</p>
+
+            <h4>Parámetros importantes en el fresado</h4>
+            <p>Entre los factores que influyen en el proceso se encuentran:</p>
+            <ul>
+                <li><strong>Velocidad de giro:</strong> determina cuántas revoluciones realiza la herramienta por minuto.</li>
+                <li><strong>Velocidad de avance:</strong> indica qué tan rápido se desplaza la herramienta respecto de la pieza.</li>
+                <li><strong>Profundidad de corte:</strong> representa la cantidad de material que se retira en cada pasada.</li>
+                <li><strong>Tipo de herramienta:</strong> sus dimensiones y geometría influyen en las operaciones posibles.</li>
+                <li><strong>Sujeción:</strong> mantiene la pieza estable durante el maquinado.</li>
+            </ul>
+            <p>Estos parámetros deben ajustarse de acuerdo con las recomendaciones del fabricante y las características del material. Una configuración incorrecta puede generar vibraciones, desgaste excesivo, sobrecalentamiento o daños en la pieza.</p>
+
+            <h3>2. Sierra de cinta para madera</h3>
+            <p>La sierra de cinta utiliza una hoja continua que se desplaza mediante un sistema de poleas. Este movimiento permite realizar cortes en materiales como madera y ciertos tableros derivados.</p>
+            <p>Dependiendo de la máquina y de la hoja utilizada, pueden realizarse cortes rectos o curvos.</p>
+            <p>La selección de la hoja, la velocidad de trabajo y la forma de sujetar el material influyen en la calidad del corte. También es indispensable mantener las manos alejadas de la hoja y seguir las instrucciones de seguridad correspondientes.</p>
+            <p>Este equipo resulta útil para preparar piezas que posteriormente pueden lijarse, ensamblarse o someterse a otras operaciones de fabricación.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>VII. Deformación y corte de lámina metálica</h2>
+            <p>Las láminas metálicas pueden transformarse mediante operaciones que separan material o modifican su forma. Dos equipos utilizados para estos procesos son la guillotina y la dobladora.</p>
+
+            <h3>1. Guillotina mecánica para lámina</h3>
+            <p>La guillotina es una máquina que permite realizar cortes rectos en láminas metálicas. Su mecanismo aplica una fuerza de corte mediante una cuchilla que actúa sobre el material.</p>
+            <p>Se utiliza cuando es necesario obtener piezas con dimensiones específicas a partir de una lámina de mayor tamaño.</p>
+            <p>Antes de operar este equipo, se debe comprobar que el material sea compatible con su capacidad y que se encuentre correctamente colocado. También deben mantenerse las manos alejadas de la zona de corte y respetarse los procedimientos de accionamiento establecidos por el taller.</p>
+            <p>La guillotina permite obtener bordes relativamente rectos y facilita la preparación de componentes para procesos posteriores.</p>
+
+            <h3>2. Dobladora de lámina</h3>
+            <p>La dobladora es una máquina diseñada para cambiar el ángulo de una lámina metálica sin separar completamente el material.</p>
+            <p>El proceso se realiza aplicando una fuerza controlada que produce una deformación. De esta manera se pueden fabricar pestañas, dobleces y perfiles utilizados en carcasas, soportes y estructuras.</p>
+            <p>La forma final depende de factores como el espesor del material, las propiedades del material, la geometría de las herramientas y el ángulo requerido.</p>
+            <p>Para conseguir un doblez adecuado es importante considerar el comportamiento del material, ya que después de retirar la fuerza puede producirse cierta recuperación elástica.</p>
+
+            <h2>VIII. Procesos de unión: soldadura por puntos</h2>
+            <p>La soldadura por puntos es un proceso de unión que utiliza resistencia eléctrica y presión para unir dos piezas metálicas, normalmente láminas superpuestas.</p>
+            <p>Durante el proceso, dos electrodos aplican presión sobre la zona de unión y permiten el paso de una corriente eléctrica. La resistencia eléctrica genera calor localizado, lo que produce la unión de los materiales.</p>
+            <p>Entre sus principales características se encuentran:</p>
+            <ul>
+                <li>Permite unir láminas metálicas sin utilizar material de aporte en el proceso habitual.</li>
+                <li>Puede realizar uniones en tiempos relativamente cortos.</li>
+                <li>Se utiliza en procesos de fabricación que requieren unir numerosas piezas.</li>
+                <li>La calidad de la unión depende de factores como la corriente, el tiempo de aplicación y la presión ejercida.</li>
+            </ul>
+            <p>Este método tiene aplicaciones en la fabricación de estructuras metálicas y en la industria automotriz, entre otras áreas.</p>
+            <p>La soldadura por puntos requiere capacitación, protección adecuada y el cumplimiento de las indicaciones de seguridad del equipo.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>IX. Relación de las máquinas del IDIT con la mecatrónica</h2>
+            <p>La mecatrónica integra conocimientos de mecánica, electrónica, control y programación para desarrollar sistemas y productos. Las máquinas y herramientas de manufactura se relacionan con esta disciplina porque permiten fabricar los componentes físicos que posteriormente pueden incorporarse a un sistema.</p>
+            <p>Por ejemplo, una fresadora puede utilizarse para producir piezas mecánicas, mientras que una guillotina y una dobladora permiten preparar componentes de lámina para fabricar soportes o carcasas.</p>
+            <p>Por otra parte, los instrumentos de medición ayudan a comprobar que las dimensiones de esos componentes sean adecuadas. Esta verificación es importante para que las piezas puedan ensamblarse correctamente y cumplir con su función.</p>
+            <p>El conocimiento de los procesos de manufactura permite seleccionar mejor los materiales, anticipar las limitaciones de fabricación y desarrollar diseños más funcionales.</p>
+
+            <h2>X. Conclusión</h2>
+            <p>A partir de esta investigación comprendí la importancia de conocer las máquinas, las herramientas y los instrumentos de medición utilizados en los talleres de ingeniería.</p>
+            <p>El calibrador Vernier y el micrómetro permiten verificar dimensiones, aunque tienen características y rangos de aplicación diferentes. Por su parte, la fresadora y la sierra de cinta se utilizan para realizar operaciones de corte y maquinado, mientras que la guillotina, la dobladora y la soldadora por puntos permiten transformar y unir materiales.</p>
+            <p>También pude identificar que la seguridad es un aspecto indispensable en cualquier proceso de manufactura, ya que el uso de maquinaria requiere preparación, atención y respeto de los procedimientos establecidos.</p>
+            <p>Finalmente, estos conocimientos permiten comprender mejor la relación entre el diseño, la fabricación y la verificación de componentes, etapas fundamentales para desarrollar proyectos de ingeniería y mecatrónica.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>XI. Fuentes de consulta</h2>
+            <ul>
+                <li>Material de referencia de la asignatura Introducción a la Mecatrónica, apartado «Máquinas del IDIT».</li>
+                <li>Conceptos generales de metrología, instrumentos de medición y procesos de manufactura.</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>8. Evidencias</h2>
+            <div style="text-align: center; margin-top: 16px;">
+                <img src="Image%20(22).jpg" alt="Contramolde impreso en 3D" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 16px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Contramolde impreso en 3D</p>
+
+                <img src="Image%20(23).jpg" alt="Detalle del contramolde" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 22px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Detalle del contramolde</p>
+
+                <img src="agregando%20diluyente.jpg" alt="Agregando diluyente a la mezcla" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 22px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Agregando diluyente</p>
+
+                <img src="virtiendo%20la%20silicona.jpg" alt="Virtiendo la silicona en el contramolde" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 22px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Virtiendo la silicona</p>
+
+                <img src="esperando%20a%20que%20seque.jpg" alt="Esperando a que seque el molde de silicona" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 22px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Esperando a que seque</p>
+
+                <img src="preparando%20resina.jpg" alt="Preparando la resina líquida" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 22px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Preparando resina</p>
+
+                <img src="agregando%20catalizador.jpg" alt="Agregando catalizador a la resina" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 22px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Agregando catalizador</p>
+
+                <img src="vaciando%20la%20resina%20en%20molde.jpg" alt="Vaciando la resina en el molde de silicona" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 22px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Vaciando la resina en el molde</p>
+
+                <img src="figura%20terminada.jpg" alt="Figura de pato-gato terminada en resina" style="max-width: 100%; border-radius: 10px; border: 1px solid #cbd5e1; margin-top: 22px;">
+                <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Figura terminada</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
