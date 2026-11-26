@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 4: Máquinas CNC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f2f5f9;
+            color: #243247;
+            line-height: 1.65;
+        }
+
+        header {
+            background: linear-gradient(135deg, #102a43, #176b87);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #d9e8f0;
+            max-width: 720px;
+            margin: 0 auto 8px;
+        }
+
+        .meta-info {
+            font-size: 14px;
+            color: #bae6fd;
+            margin-bottom: 20px;
+        }
+
+        .volver {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #8bd3dd;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .volver:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        main {
+            max-width: 920px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .seccion {
+            background: white;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 5px 18px rgba(16, 42, 67, 0.07);
+            border: 1px solid #e2e8f0;
+        }
+
+        .seccion h2 {
+            color: #102a43;
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+
+        .seccion h3 {
+            color: #176b87;
+            font-size: 18px;
+            margin: 20px 0 10px;
+        }
+
+        .seccion p {
+            color: #334155;
+            margin-bottom: 12px;
+        }
+
+        .seccion ul, .seccion ol {
+            margin: 10px 0 16px 24px;
+            color: #334155;
+        }
+
+        .seccion li {
+            margin-bottom: 8px;
+        }
+
+        .tabla-contenedor {
+            overflow-x: auto;
+            margin: 16px 0 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14.5px;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #102a43;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        .evidencia {
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .evidencia img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            margin-top: 12px;
+        }
+
+        .pie-foto {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Práctica 4: Máquinas CNC</h1>
+        <p>Maquinado por Control Numérico Computarizado (CNC) — Proyecto: Copo de nieve</p>
+        <div class="meta-info"><strong>Asignatura:</strong> Proyecto de Ingeniería</div>
+        <a class="volver" href="../index.html">← Volver al portafolio</a>
+    </header>
+
+    <main>
+        <section class="seccion">
+            <h2>I. Objetivo</h2>
+            <p>Conocer el funcionamiento de las máquinas CNC y comprender cómo se utilizan para fabricar piezas a partir de un diseño digital. Durante esta práctica, se buscó identificar las etapas necesarias para preparar un diseño, configurar el proceso de corte y obtener una pieza física, aplicando medidas de seguridad y considerando las características del material utilizado.</p>
+
+            <h2>II. Introducción</h2>
+            <p>Las máquinas CNC, cuyo nombre proviene de <em>Computer Numerical Control</em> o Control Numérico Computarizado, son equipos que realizan operaciones de fabricación mediante instrucciones programadas por computadora. Estas máquinas pueden mover una herramienta de corte siguiendo trayectorias específicas para dar forma a distintos materiales.</p>
+            <p>Su uso permite fabricar piezas con mayor precisión y repetir un mismo diseño con resultados similares. Además, facilita la elaboración de figuras con formas geométricas y detalles que podrían ser difíciles de realizar manualmente.</p>
+            <p>En esta práctica se conoció el proceso de maquinado CNC y se trabajó en la elaboración de un copo de nieve. Este proyecto permitió relacionar el diseño digital con la fabricación física, además de observar la importancia de preparar correctamente el archivo y configurar los parámetros antes de iniciar el corte.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>III. Fundamentos teóricos</h2>
+
+            <h3>1. ¿Qué es una máquina CNC?</h3>
+            <p>Una máquina CNC es un equipo que utiliza instrucciones digitales para controlar los movimientos de sus componentes. En el caso de un router CNC, una herramienta giratoria, conocida como fresa, retira material siguiendo una trayectoria previamente definida.</p>
+            <p>El movimiento de la herramienta se controla mediante diferentes ejes, comúnmente identificados como X, Y y Z. Estos permiten establecer su posición y profundidad de trabajo.</p>
+            <p>Las máquinas CNC se utilizan en diferentes áreas de la industria, como la fabricación de muebles, la creación de prototipos, la elaboración de componentes y el desarrollo de piezas para proyectos de ingeniería.</p>
+
+            <h3>2. Diferencia entre CAD y CAM</h3>
+            <p>Para fabricar una pieza con CNC es importante distinguir dos conceptos:</p>
+            <ul>
+                <li><strong>CAD (Diseño Asistido por Computadora):</strong> se utiliza para crear el dibujo o modelo digital de una pieza.</li>
+                <li><strong>CAM (Manufactura Asistida por Computadora):</strong> permite preparar las trayectorias que seguirá la herramienta para fabricar el diseño.</li>
+            </ul>
+            <p>En términos generales, primero se desarrolla la geometría de la pieza y después se configura el proceso de fabricación. El software CAM permite definir aspectos como la herramienta, la profundidad de corte y la trayectoria que deberá seguir la máquina.</p>
+
+            <h3>3. ¿Qué es el código G?</h3>
+            <p>El código G es un lenguaje utilizado para indicar a las máquinas CNC cómo deben realizar determinados movimientos. Sus instrucciones pueden establecer posiciones, trayectorias, velocidades y otras condiciones del proceso.</p>
+            <p>Algunos comandos comunes son:</p>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Comando</th>
+                            <th>Función</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>G00</strong></td>
+                            <td>Realiza movimientos rápidos de posicionamiento.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G01</strong></td>
+                            <td>Indica un movimiento lineal controlado.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G02</strong></td>
+                            <td>Define una trayectoria circular en sentido horario.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G03</strong></td>
+                            <td>Define una trayectoria circular en sentido antihorario.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G21</strong></td>
+                            <td>Establece las unidades en milímetros.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G90</strong></td>
+                            <td>Utiliza coordenadas absolutas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M03</strong></td>
+                            <td>Ordena encender el husillo en sentido horario, según la configuración del equipo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M05</strong></td>
+                            <td>Ordena detener el husillo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Estos comandos forman parte de las instrucciones que permiten traducir un diseño digital en movimientos físicos. Su interpretación puede variar según el controlador y la configuración de cada máquina.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>IV. Seguridad durante el uso de máquinas CNC</h2>
+            <p>El uso de equipos CNC requiere seguir medidas de seguridad debido al movimiento de la máquina, la rotación de la herramienta y la generación de polvo y residuos.</p>
+            <p>Entre las principales medidas se encuentran:</p>
+            <ol>
+                <li>Utilizar el equipo de protección personal indicado por el laboratorio.</li>
+                <li>Llevar ropa adecuada y evitar prendas sueltas, accesorios colgantes o cabello sin recoger.</li>
+                <li>Mantener las manos alejadas de la herramienta de corte mientras el equipo esté funcionando.</li>
+                <li>Comprobar que el material se encuentre correctamente sujeto antes de iniciar el proceso.</li>
+                <li>Mantener el área de trabajo despejada y ordenada.</li>
+                <li>Verificar que la herramienta y la máquina estén preparadas por personal autorizado.</li>
+                <li>Conocer la ubicación del paro de emergencia y seguir las indicaciones del responsable del laboratorio.</li>
+                <li>Utilizar el sistema de extracción de polvo cuando corresponda.</li>
+                <li>No dejar la máquina funcionando sin la supervisión requerida.</li>
+            </ol>
+            <p>Estas medidas ayudan a reducir los riesgos y permiten realizar las actividades de fabricación de una manera más segura.</p>
+
+            <h2>V. Materiales y herramientas</h2>
+            <p>Para realizar un proceso de maquinado CNC pueden utilizarse diferentes materiales y herramientas, dependiendo del diseño y de las características de la máquina.</p>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Función</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Computadora</strong></td>
+                            <td>Permite preparar el diseño y configurar el proceso de fabricación.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Software CAD/CAM</strong></td>
+                            <td>Se utiliza para diseñar la figura y establecer las trayectorias de corte.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Máquina router CNC</strong></td>
+                            <td>Ejecuta las trayectorias programadas sobre el material.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fresa de corte</strong></td>
+                            <td>Retira material para obtener la forma deseada.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Material de trabajo</strong></td>
+                            <td>Es la lámina o pieza sobre la que se realiza el corte.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sistema de sujeción</strong></td>
+                            <td>Mantiene el material fijo durante el maquinado.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sistema de extracción</strong></td>
+                            <td>Ayuda a retirar el polvo y los residuos generados durante el proceso.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>La selección de la herramienta y los parámetros depende del material, el espesor de la pieza y el tipo de operación que se realizará.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>VI. Desarrollo de la práctica</h2>
+
+            <h3>1. Diseño del copo de nieve</h3>
+            <p>La práctica comenzó con la preparación del diseño que se utilizaría para fabricar la pieza. En esta etapa se definió la forma del copo de nieve, considerando sus contornos y los detalles que debían conservarse durante el corte.</p>
+            <p>El diseño digital es importante porque establece la geometría que la máquina deberá reproducir. Por ello, es necesario revisar que las líneas estén correctamente definidas y que las partes de la figura tengan las dimensiones necesarias.</p>
+
+            <h3>2. Preparación del archivo y las trayectorias</h3>
+            <p>Después de realizar el diseño, se preparó el archivo para el proceso de fabricación. En esta etapa se revisan las trayectorias que seguirá la herramienta y se determinan los parámetros necesarios para realizar el corte.</p>
+            <p>La trayectoria debe corresponder con la geometría del diseño. También es importante considerar el diámetro de la fresa, ya que este influye en las dimensiones finales y en la forma de los detalles que puede reproducir la máquina.</p>
+
+            <h3>3. Preparación de la máquina CNC</h3>
+            <p>Antes de iniciar el corte, es necesario preparar el equipo y asegurar el material sobre la superficie de trabajo. También se debe verificar que la herramienta esté correctamente instalada y que el área se encuentre libre de objetos que puedan interferir con el movimiento de la máquina.</p>
+            <p>La preparación es una etapa importante porque ayuda a evitar desplazamientos del material y errores durante la fabricación.</p>
+
+            <h3>4. Proceso de maquinado</h3>
+            <p>Una vez preparado el diseño y el equipo, la máquina ejecuta las trayectorias programadas para retirar el material y formar la figura. Durante este procedimiento, la herramienta sigue los movimientos establecidos en el archivo de fabricación.</p>
+            <p>En el caso del copo de nieve, el corte debía respetar el contorno y los detalles del diseño para obtener una figura reconocible y conservar las partes que la componen.</p>
+            <p>El resultado depende de factores como la precisión del diseño, la sujeción del material, el estado de la herramienta y los parámetros de corte seleccionados.</p>
+
+            <h3>5. Resultado final</h3>
+            <p>Al finalizar el maquinado, se obtiene la pieza física a partir del diseño digital. En esta etapa se puede revisar si la forma general se conservó, si los detalles se distinguen correctamente y si el acabado es adecuado.</p>
+            <p>La comparación entre el archivo inicial y la pieza terminada permite comprender cómo una máquina CNC transforma las instrucciones digitales en un objeto real.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>VII. Parámetros que influyen en el corte CNC</h2>
+            <p>Para obtener buenos resultados, es necesario considerar diferentes parámetros durante la preparación del proceso.</p>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Descripción</th>
+                            <th>Importancia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Velocidad del husillo</strong></td>
+                            <td>Velocidad de giro de la herramienta.</td>
+                            <td>Influye en la forma en que la herramienta entra en contacto con el material.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Velocidad de avance</strong></td>
+                            <td>Rapidez con la que la herramienta se desplaza durante el corte.</td>
+                            <td>Afecta el tiempo de fabricación y la calidad del acabado.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Profundidad de corte</strong></td>
+                            <td>Cantidad de material que se retira en cada pasada.</td>
+                            <td>Influye en el esfuerzo de la herramienta y en el resultado del corte.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tipo de fresa</strong></td>
+                            <td>Herramienta utilizada para realizar el maquinado.</td>
+                            <td>Determina las operaciones que pueden realizarse y el acabado obtenido.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sujeción del material</strong></td>
+                            <td>Forma en que se fija la pieza a la mesa de trabajo.</td>
+                            <td>Ayuda a evitar movimientos que puedan alterar el corte.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trayectoria</strong></td>
+                            <td>Recorrido que sigue la herramienta.</td>
+                            <td>Define la geometría que se fabricará.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Estos parámetros deben seleccionarse de acuerdo con las características del material y las recomendaciones del equipo. No existe una única configuración adecuada para todos los trabajos.</p>
+
+            <h2>VIII. Importancia del diseño para la fabricación</h2>
+            <p>Un diseño destinado a fabricarse mediante CNC debe considerar las limitaciones físicas de la máquina y de la herramienta.</p>
+            <p>Por ejemplo, una fresa tiene un diámetro determinado, por lo que las esquinas interiores y los detalles demasiado pequeños pueden no reproducirse exactamente como aparecen en el diseño digital. También es importante evitar partes excesivamente delgadas que puedan romperse o perder estabilidad durante el corte.</p>
+            <p>En el caso del copo de nieve, la distribución de sus formas y el tamaño de sus detalles son aspectos importantes para lograr una pieza que conserve su estructura después del maquinado.</p>
+            <p>Por esta razón, el diseño digital no solo debe verse bien en la computadora, sino que también debe ser adecuado para el proceso de fabricación seleccionado.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>IX. Aplicaciones de las máquinas CNC en la mecatrónica</h2>
+            <p>Las máquinas CNC tienen diversas aplicaciones dentro de la ingeniería y la mecatrónica. Se utilizan para fabricar prototipos, estructuras, soportes, carcasas y componentes que posteriormente pueden integrarse en sistemas mecánicos o electrónicos.</p>
+            <p>También permiten desarrollar piezas con dimensiones controladas y repetir procesos de fabricación cuando se necesita obtener más de una unidad.</p>
+            <p>Su relación con la mecatrónica se encuentra en la combinación de diseño digital, programación, movimiento mecánico y control automatizado. Estos elementos permiten convertir una idea en una pieza física que puede utilizarse en otros proyectos de ingeniería.</p>
+
+            <h2>X. Conclusión</h2>
+            <p>La práctica de máquinas CNC permitió comprender la relación entre el diseño digital y la fabricación de objetos físicos. Mediante el proyecto del copo de nieve fue posible observar la importancia de preparar correctamente la geometría de una pieza y considerar las condiciones necesarias para realizar su corte.</p>
+            <p>Además, se identificó la función del software CAD/CAM, las trayectorias de fabricación, los parámetros de corte y las medidas de seguridad que deben seguirse al trabajar con este tipo de maquinaria.</p>
+            <p>Esta actividad permitió reconocer que las máquinas CNC son herramientas importantes en la ingeniería, ya que facilitan la fabricación de piezas con formas definidas y ayudan a relacionar los conocimientos de diseño, programación y procesos de manufactura.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>XI. Evidencias fotográficas</h2>
+            <div class="evidencia">
+                <img src="Evidencias/copodenieve.jpeg" alt="Copo de nieve terminado">
+                <p class="pie-foto">Copo de nieve terminado</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
